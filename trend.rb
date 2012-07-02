@@ -10,23 +10,5 @@ class Trend
 	
 	def to_s
 		"#{@id} - #{@name}"
-	end
-		
-	def id
-		@id
-	end
-	
-	def name
-		@name
-	end
-	
-	def query
-		@query
-	end
-	
-	def url
-		@url
-	end 
-	
-	
+	end	
 end

@@ -15,28 +15,4 @@ class Twit
 		"#{@id} - #{@text}"
 	end
 	
-	def id
-		@id
-	end
-	
-	def id_twit
-		@id_twit
-	end
-	
-	def created_at
-		@created_at
-	end 
-	
-	def text
-		@text
-	end
-	
-	def from_user_id
-		@from_user_id
-	end
-	
-	def links
-		@links
-	end
-	
 end
