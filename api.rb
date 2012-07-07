@@ -3,7 +3,7 @@ require "uri"
 
 module Api
 	
-	def self.get_http_response (url)
+	def get_http_response (url)
 		begin			
 			response = Net::HTTP.get_response('api.twitter.com',url)
 		rescue StandardError

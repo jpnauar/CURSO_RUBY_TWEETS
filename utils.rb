@@ -5,7 +5,8 @@ require_relative 'user'
 
 require 'json'
 
-class Utils
+class Utils	
+	include Crawler
 	
 	attr_accessor :array_of_trends, :array_of_twits
 	
@@ -16,7 +17,7 @@ class Utils
 
 	def get_trends
 		url		= '/1/trends/1.json'
-		response	= Crawler.request_url url
+		response	= request_url url
 		if response != nil
 			hash		= JSON.parse(response)
 			trends 	= hash[0]['trends']
@@ -35,7 +36,7 @@ class Utils
 
 	def get_twits_for_trend (trend)
 		url 		= "/search.json?q=#{trend}"
-		response 	= Crawler.request_url url
+		response 	= request_url url
 		if response != nil
 			hash 	= JSON.parse(response)
 			twits	= hash['results']
@@ -56,7 +57,7 @@ class Utils
 
 	def get_twit_by_id (twit_id)
 		url		= "/1/statuses/show/#{twit_id}.json"
-		result 	= Crawler.request_url url
+		result 	= request_url url
 		if result != nil
 			hash			= JSON.parse(result)
 			user_twit 		= hash['user']		
@@ -67,7 +68,7 @@ class Utils
 
 	def get_user_information_by_screen_name(screen_name)
 		url 		= "/1/users/show.json?screen_name=#{screen_name}"
-		result 	= Crawler.request_url(url)
+		result 	= request_url(url)
 		if result != nil			
 			hash_user_information = JSON.parse(result)
 			id			= hash_user_information['id']
