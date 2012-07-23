@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_twit: 
+  text: 
+  links: 
+  link_text: 
+  trend: 
+  user: 
+
+two:
+  id_twit: 
+  text: 
+  links: 
+  link_text: 
+  trend: 
+  user: 

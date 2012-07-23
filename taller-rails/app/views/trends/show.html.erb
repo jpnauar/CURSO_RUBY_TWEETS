@@ -1,0 +1,22 @@
+<h1>Twits of <%= @trend.name %></h1>
+
+<table>
+	<% i = 1 %>
+	<% @twits.each do |twit| %>
+		<tr>						
+	    	<th><%= i %> - </th><td><%= twit.text %></td>	  	
+	  		<% if not twit.user.nil? %>
+	  	</tr>	
+	  	<tr>
+	  		<th></th><td><b>Posted by: </b><%= link_to twit.user.screen_name, twit.user %></td>	  	
+	  		<% end %>	  	
+	  		<% if not twit.url.nil? %>
+	  	</tr>
+	  		<th></th><td><b>Url: </b><%= twit.url %><b> - Text: </b><%= twit.url_text %></td>
+	  		<% end %>
+	  	</tr>
+	  	<% i += 1 %>	  	
+	<% end %>
+</table>
+
+<%= link_to 'Back to Trending Topic', trends_path %>

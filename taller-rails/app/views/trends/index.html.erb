@@ -1,0 +1,21 @@
+<h1>Trending Topics</h1>
+
+<table>
+	<tr>
+    	<td><h3>The Last Ten Trends</h3></td>
+    	<td></td>
+		<td></td>
+		<td></td>
+		<td><%= link_to 'Get Last Trending Topic', new_trend_path %></td>
+  	</tr>
+</table>
+
+<table>
+	<% i = 1 %>
+	<% @trends.each do |trend| %>
+		<tr>
+	    	<th><%= i %> -</th><td><%= link_to trend.name, trend %></td>    
+	  	</tr>
+	  	<% i += 1 %>
+	<% end %>
+</table>

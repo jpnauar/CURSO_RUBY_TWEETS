@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: 
+  screen_name: 
+  location: 
+  description: 
+  followers_count: 
+  friends_count: 1
+
+two:
+  name: 
+  screen_name: 
+  location: 
+  description: 
+  followers_count: 
+  friends_count: 1

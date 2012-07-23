@@ -1,0 +1,24 @@
+<h1>Information of the user <%= @user.screen_name %> </h1>
+
+<table>
+	<tr>
+		<td><b>Name:</b></td><td><%= @user.name %></td>
+	</tr>
+	<tr>
+		<td><b>Location:</b></td><td><%= @user.location %></td>
+	</tr>
+	<tr>
+		<td><b>Description:</b></td><td><%= @user.description %></td>
+	</tr>
+	<tr>
+		<td><b>Followers count:</b></td><td><%= @user.followers_count %><td>
+	</tr>
+	<tr>
+		<td><b>Friends count:</b></td><td><%= @user.friends_count %></td>
+	</tr>
+	<tr></tr>
+	<tr></tr>
+	<tr></tr>
+</table>
+
+<%= link_to 'Back to Twits', :back %>
